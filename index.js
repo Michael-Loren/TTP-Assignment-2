@@ -80,3 +80,18 @@ function myReduce(arr, callback){
 
 //console.log(arr1.reduce((x,y) => x + y));
 //console.log(myReduce(arr, (x,y) => x * y));
+
+
+
+function myInclude(arr, target){
+    for (const i of arr){
+        if (i === target){
+            return true;
+        }
+    }
+    return false;
+}
+
+//for (let i = 0; i < 12; i++)
+//console.log(myInclude([2,3,4,5,6,7,8], i))
+
