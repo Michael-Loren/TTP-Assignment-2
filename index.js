@@ -78,7 +78,7 @@ function myReduce(arr, callback){
 }
 
 
-//console.log(arr1.reduce((x,y) => x + y));
+//onsole.log(arr1.reduce((x,y) => x + y));
 //console.log(myReduce(arr, (x,y) => x * y));
 
 
@@ -92,6 +92,17 @@ function myInclude(arr, target){
     return false;
 }
 
+
 //for (let i = 0; i < 12; i++)
 //console.log(myInclude([2,3,4,5,6,7,8], i))
 
+function myPush(arr, val){
+    let len = arr.length;
+    arr[len] = val;
+    len++;
+    arr.length = len;
+    return arr;
+
+}
+
+console.log(myPush([2,3], 5));
