@@ -92,9 +92,22 @@ function myInclude(arr, target){
     return false;
 }
 
-
 //for (let i = 0; i < 12; i++)
 //console.log(myInclude([2,3,4,5,6,7,8], i))
+
+
+function myIndexOf(arr, target){
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] == target){
+            return i;
+        }
+    }
+    return -1;
+}
+
+//console.log(myIndexOf([2,3,7,54,54,13,6,2,23,25],3));
+
+
 
 function myPush(arr, val){
     let len = arr.length;
@@ -105,4 +118,37 @@ function myPush(arr, val){
 
 }
 
-console.log(myPush([2,3], 5));
+//console.log(myPush([2,3], 5));
+
+
+function myLastIndex(arr, target){
+    for (let i = arr.length; i >= 0; i--){
+        if (arr[i] == target){
+            return i;
+        }
+    }
+    return -1;
+}
+
+//console.log(myLastIndex([2,3,7,54,54,13,6,2,23,25],54));
+
+function grabKeys(arr){
+    let ret = [];
+    for (const i in arr){
+        ret.push(i);
+    }
+    return ret;
+}
+
+let objs = {a : 3, b : 6, c : 9};
+//console.log(grabKeys(objs));
+
+
+function grabValues(arr){
+    let ret = [];
+    for (const i in arr){
+        ret.push(arr[i]);
+    }
+    return ret;
+}
+console.log(grabValues(objs));
